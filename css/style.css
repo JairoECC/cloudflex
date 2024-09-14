@@ -34,6 +34,11 @@ nav {
     transition: top 0.3s ease; /* Transición suave para la posición */
     z-index: 1000; /* Asegura que la barra esté por encima del contenido */
 }
+
+.responsive-block {
+    display: none !important;
+}
+
 .ul-nav-link .tel-number-responsive{
     display: none;
 }
@@ -225,17 +230,30 @@ nav {
 .search-button:hover {
     background-color: #1aa782; /* Color del botón al pasar el mouse por encima */
 }
+.imagen-lineas {
+    user-select: none; /* Evita la selección de texto alrededor de la imagen */
+    -webkit-user-drag: none; /* Evita el arrastre en navegadores basados en WebKit */
+    pointer-events: none; /* Opcional: desactiva todos los eventos del mouse */
+    z-index: -1;
+    width: 29%;
+}
+.inverso-img {
+    position: absolute; /* Usa fixed si quieres que la imagen se mantenga fija al hacer scroll */
+    right: 0; /* Alinea la imagen al lado derecho del body */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido principal */
+}
+
 #services{
     width: 80%;
     margin: auto;
-    margin-top: 155px;
+    margin-top: 170px;
     /* border: 1px solid red; */
 }
 .content-services-one{
-    width: 700px;
+    width: 50%;
+    height: auto;
     text-align: center;
     margin: auto;
-    /* border: 1px solid red; */
 }
 .content-services-one h4 {
     background-color: #113041;
@@ -258,7 +276,7 @@ nav {
 }
 .content-services-one p{
     color: #a0a7c0;
-    width: 590px;
+    width: 100%;
     margin: auto;
     margin-top: -12px;
     line-height: 2;
@@ -277,7 +295,7 @@ nav {
     flex: 1; /* Cada div ocupa un tercio del espacio disponible */
     text-align: center; /* Centra el texto horizontalmente */
     padding: 12px; /* Espacio interno para mejor visualización */
-    height: auto;
+    height: 600px;
     border-radius: 10px;
     padding-bottom: 70px;
 }
@@ -285,7 +303,7 @@ nav {
     background-color: #1b213b;
     border-bottom: 3px solid #09eaab;
 }
-.host-div img{
+.host-div img, .paas-div img, .traffics-div img{
     width: 120px;
     height: auto;
     margin-top: 40px;
@@ -293,7 +311,7 @@ nav {
 .host-div h2{
     color: #fff;
     font-weight: 600;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .content-services-two p{
     line-height: 2;
@@ -308,28 +326,19 @@ nav {
 .content-services-two i{
     margin-left: 8px;
 }
-.paas-div img{
-    width: 155px;
-    height: auto;
-    margin-top: 40px;
-}
 .paas-div h2{
     color: #fff;
     font-weight: 600;
-    margin-top: 31px;
-}
-.traffics-div img{
-    width: 132px;
-    height: auto;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .traffics-div h2{
     color: #fff;
     font-weight: 600;
-    margin-top: 42px;
+    margin-top: 30px;
 }
 .content-services-three{
-    width: 700px;
+    width: 50%;
+    height: auto;
     text-align: center;
     margin: auto;
     margin-top: 110px;
@@ -356,7 +365,7 @@ nav {
 }
 .content-services-three p{
     color: #a0a7c0;
-    width: 590px;
+    width: 100%;
     margin: auto;
     margin-top: -12px;
     line-height: 2;
@@ -381,33 +390,17 @@ nav {
     border-bottom: 1px solid #2b2e47;
 }
 
-.fastest-div img {
-    width: 65px;
+.content-services-four > div img {
+    width: 90px;
     height: auto;
+}
+.mail-div img{
+    width: 105px !important;
+    height: 90px !important;
 }
 
 .content-services-four h3 {
     font-weight: 400;
-}
-
-.source-div img {
-    width: 90px;
-    height: auto;
-}
-
-.compacked-div img {
-    width: 75px;
-    height: auto;
-}
-
-.cs-div img {
-    width: 73px;
-    height: auto;
-}
-
-.mail-div img {
-    width: 85px;
-    height: auto;
 }
 .content-services-four div {
     transition: border-bottom 0.3s, color 0.3s; /* Suaviza la transición del borde y el color */
@@ -580,7 +573,7 @@ nav {
 }
 .news-content-one > div, .news-content-two > div{
     flex: 1;
-    height: 500px;
+    height: auto;
 }
 .new-one-description{
     width: auto;
@@ -606,21 +599,7 @@ nav {
     align-items: center;
     margin-top: 35px;
     margin-bottom: 30px;
-}
-.description-title .title-black{
-    color: #121833;
     font-family: "Ubuntu", sans-serif;
-}
-.description-title .title-blue{
-    color: #0221ed;
-    font-family: "Ubuntu", sans-serif;
-}
-.description-title .title-y{
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.description-title .title-scale{
-    margin-left: 10px;
 }
 .new-one-description p, .new-two-description p{
     line-height: 2;
@@ -979,6 +958,9 @@ footer{
     height: 15px;
 }
 @media (max-width: 1400px){
+    #home{
+        margin-top: 150px;
+    }
     .home-content-text h1{
         font-size: 70px;
     }
@@ -1007,6 +989,64 @@ footer{
         width: 24%;
         font-size: 12px;
         margin-left: 5px;
+    }
+    body section div p{
+        font-size: 14px;
+    }
+    body section div h4{
+        font-size: 15px;
+    }
+    .host-div img, .paas-div img, .traffics-div img{
+        width: 85px;
+    }
+    .content-services-two > div{
+        height: 500px;
+    }
+    .new-two-description h1, .faq-one h1, .content-services-one h1, .content-services-three h1, .faq-three h1{
+        font-size: 33px;
+    }
+    .faq-three h2{
+        font-size: 28px;
+    }
+    .content-services-one h4, .content-services-three h4{
+        width: 260px;
+    }
+    .new-two-description h4, .faq-one h4, .faq-three h4{
+        width: 250px;
+    }
+    .description-title{
+        font-size: 33px;
+    }
+    .new-one-image img, .new-two-image img{
+        width: 90%;
+    }
+    .icons-one{
+        width: 230px;
+    }
+    .about-one-icons .icons-one a img{
+        width: 200px;
+    }
+    .icons-two i{
+        font-size: 30px;
+        margin-left: 18px;
+    }
+    .about-serch{
+        height: 45px;
+    }
+    .search-input-about{
+        height: 30px;
+    }
+    .about-one-description h2, .description-one h2, .description-two h2{
+        font-size: 19px;
+    }
+    .search-input-about, .search-button-about{
+        font-size: 14px;
+    }
+    .description-one-links div a, .description-two-links div a{
+        font-size: 14px;
+    }
+    .div-copy{
+        font-size: 14px;
     }
 }
 @media (max-width: 1150px){
@@ -1038,11 +1078,146 @@ footer{
     .content-services-one p{    
         font-size: 14px;
     }
-
+    #services{
+        margin-top: 100px;
+    }
+    .imagen-lineas {
+        width: 40%;
+    }
+    .content-services-two > div{
+        height: 550px;
+    }
+    .cs-options div p{
+        font-size: 12px;
+    }
+    .content-services-four > div img {
+        width: 70px;
+        height: 70px;
+    }
+    .mail-div img{
+        width: 85px !important;
+        height: 70px !important;
+    }
+    .content-services-four h3 {
+        font-size: 16px;
+    }
 }
 @media (max-width: 1000px){
     .nav-content{
         width: 98%;
+    }
+    .content-services-two > div{
+        height: 600px;
+    }
+    .cs-options div p{
+        font-size: 11px;
+    }
+    #resources i{
+        width: 20px;
+        height: 20px;
+        border-radius: 4px;
+    }
+    .cs-one, .cs-two, .cs-three {
+        margin-left: 1%;
+    }
+}
+@media (max-width: 930px){
+    .home-content-img{
+        display: none;
+        justify-content: center;
+    }
+    .home-text-p{
+        margin-top: -20px;
+        width: 95%;
+        line-height: 2;
+        color: #a0a7c0;
+    }
+    .content-services-two {
+        display: inline-block;
+        margin-top: 40px;
+    }
+    .content-services-two > div {
+        width: 75%;
+        margin: auto;
+        height: auto;
+    }
+    .cs-options{
+        display: inline-block;
+        margin-top: 65px;
+    }
+    .cs-one{
+        width: 75%;
+        margin: auto;
+        margin-top: -150px;
+    }
+    .cs-two, .cs-three {
+        width: 75%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .cs-one:hover {
+        margin-top: -150px !important;
+    }
+    .cs-two:hover, .cs-three:hover{
+        margin-top: 50px !important;
+    }
+    #about{
+        width: 95%;
+        margin: auto;
+        display: inline;
+        margin-top: 40px;
+    }
+    #about > div{
+        width: 90%;
+        margin: auto;
+    }
+    #about .about-two{
+        margin-top: 50px;
+    }
+    .about-serch{
+        width: 90%;
+    }
+    .search-input-about{
+        width: 80%;
+        font-size: 13px;
+    }
+    .search-button-about{
+        width: 20%;
+    }
+    .cs-options div p{
+        font-size: 14px;
+    }
+    #resources i{
+        width: 25px;
+        height: 25px;
+        border-radius: 5px;
+    }
+
+}
+@media (max-width: 865px){
+    .news-content-one, .news-content-two{
+        display: inline-block;
+    }
+    .responsive-block{
+        display: flex !important;
+        
+    }
+    .new-one-image, .new-two-image{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        height: auto !important;
+        margin: auto;
+    }
+    .new-one-image img, .new-two-image img{
+        width: 70%;
+    }
+    .news-content-two .responsive-none{
+        display: none;
+    }
+    .new-one-description, .new-two-description{
+        margin-bottom: 0px;
+        height: auto;
     }
 }
 @media (max-width: 770px) {
@@ -1139,5 +1314,175 @@ footer{
     body.menu-open {
         overflow: hidden;
     }
+    .content-services-four > div img {
+        width: 50%;
+        height: auto;
+    }
+    .mail-div img{
+        width: 53% !important;
+        height: auto !important;
+    }
+    .content-services-four h3 {
+        font-size: 12px;
+    }
+    .content-services-four > div {
+        height: 120px;
+    }
+    .content-services-one, .content-services-three{
+        width: 70%;
+    }
+}
+@media (max-width: 620px){
+    #home .home-content-text .search-container{
+        height: 40px;
+        width: 90%;
+    }
+    .search-container .search-input, .search-container .domain-select{
+        height: auto;
+    }
+    .search-button{
+        height: 39px;
+        font-size: 11px;
+    }
+    
+}
+@media (max-width: 522px){
+    .home-content-text h1{
+        font-size: 60px;
+    }
+    .home-content-text h2{
+        font-size: 46px;
+    }
+    body section div p{
+        font-size: 12px;
+    }
+    body section div h4{
+        font-size: 13px;
+    }
+    #home .home-content-text .search-container{
+        height: 40px;
+        width: 98%;
+    }
+    .search-container .search-input, .search-container .domain-select{
+        height: auto;
+    }
+    .search-button{
+        height: 38px;
+        font-size: 11px;
+    }
+    .content-services-one h4{
+        font-size: 13px;
+    }
+    .content-services-one h4, .content-services-three h4{
+        width: 220px;
+    }
+    .new-two-description h4, .faq-one h4, .faq-three h4{
+        width: 210px;
+    }
+    .new-one-description h4{
+        width: 300px;
+    }
+    .description-title h1{
+        font-size: 28px;
+    }
+    .new-two-description h1, .faq-one h1, .content-services-one h1, .content-services-three h1, .faq-three h1{
+        font-size: 28px;
+    }
+    .faq-three h2{
+        font-size: 24px;
+    }
+    .faq-three .btn-powering{
+        width: 150px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .about-serch{
+        width: 98%;
+        height: 40px;
+    }
+    .search-input-about{
+        height: auto;
+        font-size: 12px;
+    }
+    .search-button-about{
+        height: 38px;
+        font-size: 13px;
+    }
+    .about-one-description h2, .description-one h2, .description-two h2{
+        font-size: 18px;
+    }
+    .content-services-four{
+        margin-top: 0;
+        margin-bottom: -70px;
+    }
+    #news{
+        margin-top: 60px;
+    }
+    .person-image{
+        width: 40px;
+        height: 40px;
+    }
+    .description-one-links div a, .description-two-links div a{
+        font-size: 12px;
+    }
+    .scroll-father{
+        width: 55px;
+        height: 55px;
+    }
+    .scroll-up{
+        width: 40px;
+        height: 40px;
+    }
+    .scroll-up a{
+        font-size: 15px;
+    }
+    .div-copy{
+        font-size: 12px;
+    }
+    .nav-content ul a {
+        color: #121833 !important;
+        font-size: 16px;
+    }
+}
+@media (max-width: 490px){
+    .ul-closer{
+        font-size: 40px;
+        width: 30px;
+        height: 30px;
+    }
+    .content-services-four h3 {
+        font-size: 10px;
+    }
+    .content-services-four > div {
+        height: 100px;
+    }
+    .content-services-two > div {
+        width: 90%;
+        margin: auto;
+        height: auto;
+    }
+    .cs-one{
+        width: 90%;
+        margin: auto;
+        margin-top: -150px;
+    }
+    .cs-two, .cs-three {
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .about-one-icons .icons-one a img{
+        width: 80%;
+    }
+    .icons-one{
+        width: 45%;
+    }
+    .icons-two i{
+        font-size: 24px;
+    }
+    .nav-content ul {
+        width: 80%;
+    }
+    
 }
 
