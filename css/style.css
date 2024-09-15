@@ -1403,10 +1403,12 @@ footer{
     .search-input-about{
         height: auto;
         font-size: 12px;
+        width: 72%;
     }
     .search-button-about{
         height: 38px;
         font-size: 13px;
+        width: 28%;
     }
     .about-one-description h2, .description-one h2, .description-two h2{
         font-size: 18px;
@@ -1482,6 +1484,9 @@ footer{
     }
     .nav-content ul {
         width: 80%;
+    }
+    .search-button-about{
+        font-size: 12px;
     }
     
 }
