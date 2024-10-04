@@ -13,6 +13,9 @@ function loadContent(file, selectedDiv) {
         .then(data => {
             // Inserta el contenido del archivo en el contenedor
             document.getElementById('services-contents').innerHTML = data;
+
+            // Configura los eventos de hover después de cargar el contenido
+            setupHoverEffect();
         })
         .catch(error => {
             console.error('Error:', error);
@@ -33,3 +36,29 @@ window.onload = () => {
     const initialDiv = document.querySelector('.content-services-four .fastest-div');
     loadContent('fastest-web-servers.html', initialDiv);
 };
+
+// Función para configurar los eventos de hover en los contenedores cargados dinámicamente
+function setupHoverEffect() {
+    // Selecciona los contenedores correctos (e.g., .cs-one, .cs-two, etc.)
+    const containers = document.querySelectorAll('#services-contents .cs-one, #services-contents .cs-two, #services-contents .cs-three');
+
+    containers.forEach(container => {
+        const img = container.querySelector('img'); // Obtener la imagen dentro del contenedor actual
+        if (img) {
+            const originalSrc = img.src;
+            const hoverSrc = img.getAttribute('data-hover');
+
+            if (hoverSrc) {
+                // Evento de 'mouseover' en el contenedor actual
+                container.addEventListener('mouseover', () => {
+                    img.src = hoverSrc;
+                });
+
+                // Evento de 'mouseout' en el contenedor actual
+                container.addEventListener('mouseout', () => {
+                    img.src = originalSrc;
+                });
+            }
+        }
+    });
+}

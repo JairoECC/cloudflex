@@ -15,32 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-function loadContent(file, selectedDiv) {
-    // Oculta el contenido previo si existe
-    document.getElementById('services-contents').innerHTML = '';
+// Seleccionar todas las imágenes dentro de la clase 'cs-options'
+const images = document.querySelectorAll('.cs-options img');
 
-    // Usa fetch para cargar el archivo HTML seleccionado
-    fetch(file)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar el contenido.');
-            }
-            return response.text();
-        })
-        .then(data => {
-            // Inserta el contenido del archivo en el contenedor
-            document.getElementById('services-contents').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('services-contents').innerHTML = '<p>Error al cargar el contenido.</p>';
+images.forEach(img => {
+    // Guardar la fuente original de la imagen
+    const originalSrc = img.src;
+
+    // Verificar si la imagen tiene el atributo 'data-hover'
+    const hoverSrc = img.getAttribute('data-hover');
+
+    if (hoverSrc) {
+        // Evento de 'mouseover' para cambiar a la imagen hover
+        img.addEventListener('mouseover', () => {
+            img.src = hoverSrc;
         });
 
-    // Elimina la clase de selección de todos los divs
-    document.querySelectorAll('.content-services-four > div').forEach(div => {
-        div.classList.remove('selected');
-    });
-
-    // Añade la clase de selección al div clicado
-    selectedDiv.classList.add('selected');
-}
+        // Evento de 'mouseout' para regresar a la imagen original
+        img.addEventListener('mouseout', () => {
+            img.src = originalSrc;
+        });
+    }
+});

@@ -151,14 +151,14 @@ nav {
     /* border: 1px solid #fff; */
 }
 .home-content-text h1{
-    font-size: 100px;
+    font-size: 90px;
     margin-top: -14px;
     font-weight: 600;
     font-family: "Ubuntu", sans-serif;
 }
 .home-content-text h2{
-    font-size: 75px;
-    margin-top: -100px;
+    font-size: 81px;
+    margin-top: -80px;
     font-weight: 600;
     font-family: "Ubuntu", sans-serif;
 }
@@ -295,7 +295,8 @@ nav {
     flex: 1; /* Cada div ocupa un tercio del espacio disponible */
     text-align: center; /* Centra el texto horizontalmente */
     padding: 12px; /* Espacio interno para mejor visualización */
-    height: 600px;
+    min-height: 500px;
+    max-height: auto;
     border-radius: 10px;
     padding-bottom: 70px;
 }
@@ -747,7 +748,7 @@ nav {
     font-family: "Ubuntu", sans-serif;
 }
 .faq-three h2{
-    font-size: 30px;
+    font-size: 28px;
     color: #fff;
     margin-top: -20px;
     font-family: "Ubuntu", sans-serif;
@@ -881,6 +882,9 @@ footer{
     line-height: 2.5;
     text-decoration: none;
     color: #fff;
+}
+.description-one-links div a:hover, .description-two-links div a:hover{
+    color: #dfe9ff;
 }
 .description-two h2{
     margin-top: 60px;
