@@ -378,7 +378,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    margin-top: 65px;
     margin-bottom: 180px;
 }
 
@@ -424,7 +423,7 @@ nav {
     padding-bottom: 50px;
 }
 #services-contents{
-    width: 80%;
+    width: 83%;
     margin: auto;
     margin-top: 155px;
 }
@@ -735,6 +734,8 @@ nav {
     padding-top: 1px;
     padding-bottom: 50px;
     margin-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .faq-three h4{
     background-color: #113041;
@@ -961,16 +962,31 @@ footer{
     margin-top: -10px;
     height: 15px;
 }
+@media (max-width: 1660px){
+    .home-content-img img{
+        width: 550px;
+    }
+}
+@media (max-width: 1580px){
+    .home-content-img img{
+        width: 500px;
+    }
+}
+@media (max-width: 1478px){
+    .home-content-img img{
+        width: 450px;
+    }
+}
 @media (max-width: 1400px){
     #home{
         margin-top: 150px;
     }
     .home-content-text h1{
-        font-size: 70px;
+        font-size: 65px;
     }
     .home-content-text h2{
-        font-size: 53px;
-        margin-top: -50px;
+        font-size: 59px;
+        margin-top: -55px;
     }
     .home-text-p{
         margin-top: -16px;
@@ -1012,11 +1028,17 @@ footer{
     .faq-three h2{
         font-size: 28px;
     }
-    .content-services-one h4, .content-services-three h4{
+    .content-services-one h4{
+        width: 300px;
+    }
+    .content-services-three h4{
         width: 260px;
     }
-    .new-two-description h4, .faq-one h4, .faq-three h4{
-        width: 250px;
+    .new-two-description h4{
+        width: 240px;
+    }
+    .faq-one h4, .faq-three h4{
+        width: 300px;
     }
     .description-title{
         font-size: 33px;
@@ -1036,6 +1058,7 @@ footer{
     }
     .about-serch{
         height: 45px;
+        width: 80%;
     }
     .search-input-about{
         height: 30px;
@@ -1051,6 +1074,15 @@ footer{
     }
     .div-copy{
         font-size: 14px;
+    }
+    .ul-nav-link li a{
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 1340px){
+    .cs-options div p{
+        font-size: 13px;
     }
 }
 @media (max-width: 1150px){
@@ -1072,9 +1104,12 @@ footer{
     .line {
         width: 90%;
     }
+    .content-services-one, .content-services-three, .faq-one{
+        width: 70%;
+    }
     .content-services-one h4{
         font-size: 15px;
-        width: 245px;
+        width: 300px;
     }
     .content-services-one h1{
         font-size: 30px;
@@ -1087,9 +1122,6 @@ footer{
     }
     .imagen-lineas {
         width: 40%;
-    }
-    .content-services-two > div{
-        height: 550px;
     }
     .cs-options div p{
         font-size: 12px;
@@ -1105,13 +1137,16 @@ footer{
     .content-services-four h3 {
         font-size: 16px;
     }
+    .search-container{
+        height: 42px;
+    }
+    .search-container .search-button{
+        height: 40px;
+    }
 }
 @media (max-width: 1000px){
     .nav-content{
         width: 98%;
-    }
-    .content-services-two > div{
-        height: 600px;
     }
     .cs-options div p{
         font-size: 11px;
@@ -1123,6 +1158,12 @@ footer{
     }
     .cs-one, .cs-two, .cs-three {
         margin-left: 1%;
+    }
+    .about-serch{
+        width: 90%;
+    }
+    .description-title h1{
+        font-size: 35px;
     }
 }
 @media (max-width: 930px){
@@ -1143,7 +1184,10 @@ footer{
     .content-services-two > div {
         width: 75%;
         margin: auto;
-        height: auto;
+        padding-bottom: 0px;
+        border: 1px solid #1b213b;
+        border-bottom: 3px solid #09eaab;
+        margin-top: 50px;
     }
     .cs-options{
         display: inline-block;
@@ -1179,7 +1223,7 @@ footer{
         margin-top: 50px;
     }
     .about-serch{
-        width: 90%;
+        width: 80%;
     }
     .search-input-about{
         width: 80%;
@@ -1199,6 +1243,9 @@ footer{
 
 }
 @media (max-width: 865px){
+    .ul-nav-link li a{
+        font-size: 12px;
+    }
     .news-content-one, .news-content-two{
         display: inline-block;
     }
@@ -1260,6 +1307,10 @@ footer{
         margin-left: 5px;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+    }
+    .ul-closer:hover{
+        background-color: #e3eaf2;
     }
     .content-tel-number {
         display: none;
@@ -1270,6 +1321,9 @@ footer{
         font-size: 25px;
         color: #fff;
         cursor: pointer; 
+    }
+    .content-logo a{
+        margin-left: 17px;
     }
     .nav-content ul {
         position: fixed;
@@ -1318,6 +1372,9 @@ footer{
     body.menu-open {
         overflow: hidden;
     }
+    .content-services-four{
+        height: 200px;
+    }
     .content-services-four > div img {
         width: 50%;
         height: auto;
@@ -1332,9 +1389,17 @@ footer{
     .content-services-four > div {
         height: 120px;
     }
-    .content-services-one, .content-services-three{
-        width: 70%;
+    
+    .part-white{
+        padding-bottom: 1px;
     }
+    .ul-nav-link li a::after{
+        background-color: transparent;
+    }
+    .ul-nav-link li a:hover {
+        color: #0004ff !important;
+    }
+
 }
 @media (max-width: 620px){
     #home .home-content-text .search-container{
@@ -1348,14 +1413,19 @@ footer{
         height: 39px;
         font-size: 11px;
     }
-    
+    .about-serch{
+        width: 90%;
+    }
+    .content-services-one, .content-services-three, .faq-one{
+        width: 85%;
+    }
 }
 @media (max-width: 522px){
     .home-content-text h1{
-        font-size: 60px;
+        font-size: 55px;
     }
     .home-content-text h2{
-        font-size: 46px;
+        font-size: 50px;
     }
     body section div p{
         font-size: 12px;
@@ -1377,10 +1447,16 @@ footer{
     .content-services-one h4{
         font-size: 13px;
     }
-    .content-services-one h4, .content-services-three h4{
+    .content-services-one h4{
+        width: 270px;
+    }
+    .content-services-three h4{
         width: 220px;
     }
-    .new-two-description h4, .faq-one h4, .faq-three h4{
+    .faq-one h4, .faq-three h4{
+        width: 250px;
+    }
+    .new-two-description h4{
         width: 210px;
     }
     .new-one-description h4{
@@ -1492,6 +1568,8 @@ footer{
     .search-button-about{
         font-size: 12px;
     }
-    
+    .content-logo a img{
+        width: 140px;
+    }
 }
 
