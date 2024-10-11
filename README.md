@@ -11,9 +11,20 @@ Cloudflex es una página web de servicios de alojamiento web. La plataforma ofre
 - **Tecnología PaaS**: Facilita el desarrollo, despliegue y gestión de aplicaciones para una experiencia optimizada.
 - **Muchas características mas.
 
+## Prototipo
+
+A continuación, se muestra un prototipo visual del diseño de la página:
+
+![Prototipo de Cloudflex](img/host-image.png)
+
 ## Proyecto
 
 Este proyecto fue desarrollado como parte de mis prácticas en la empresa, con el objetivo de mejorar mis habilidades y formación profesional en desarrollo web. La página está diseñada para simular una oferta de servicios de alojamiento web modernos y escalables, con un enfoque en el rendimiento y la satisfacción del cliente.
+
+## Visualizar el Proyecto
+
+Visita la página web desplegada en GitHub Pages para ver el resultado final: [Cloudflex](https://jairoecc.github.io/cloudflex/)
+
 
 ## Tecnologías Utilizadas
 
