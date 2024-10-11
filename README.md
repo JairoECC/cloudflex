@@ -15,7 +15,7 @@ Cloudflex es una página web de servicios de alojamiento web. La plataforma ofre
 
 A continuación, se muestra un prototipo visual del diseño de la página:
 
-![Prototipo de Cloudflex](img/host-image.png)
+![Prototipo de Cloudflex](img/prototipo.png)
 
 ## Proyecto
 
