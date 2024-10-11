@@ -32,7 +32,3 @@ Visita la página web desplegada en GitHub Pages para ver el resultado final: [C
 - JavaScript para la funcionalidad y las interacciones dinámicas.
 - Font Awesome para los iconos y elementos visuales.
 - GitHub Pages para la implementación y despliegue de la página.
-
-## Contacto
-
-Para más información o consultas, visita nuestro sitio web o contáctanos a través de nuestras redes sociales.
